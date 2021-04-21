@@ -1,8 +1,8 @@
 //File System
 const fs = require('fs')
-const { error } = require('node:console')
 const path = require('path')
 
+// Создание папки
 // fs.mkdir(path.join(__dirname,'test'),(err)=>{
 //     if (err){
 //         throw err
@@ -13,10 +13,31 @@ const path = require('path')
 
 const filePath = path.join(__dirname,'test','text.txt')
 
-fs.writeFile(filePath, 'Hello NodeJS!',(err)=>{
-    if (err){
+// Запись в файл
+// fs.writeFile(filePath, '\nHello NodeJS!',(err)=>{
+//     if (err){
+//         throw err
+//     }
+
+//     console.log('Файл создан');
+// })
+
+// Дозапись в файл
+// fs.appendFile(filePath, '\nHello NodeJS!',(err)=>{
+//     if (err){
+//         throw err
+//     }
+
+//     console.log('Файл дозаписан');
+// })
+
+fs.readFile(filePath,'utf-8',(err,content)=>{
+    if(err){
         throw err
     }
 
-    console.log('Файл создан');
+    console.log(content);
+    
+    // const data = Buffer.from(content)
+    // console.log('Content: ', data.toString());
 })
