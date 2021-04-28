@@ -38,5 +38,5 @@ const obj = Object.assign({},first,{c:2,d:3}); //Объединение в 1й �
 
 console.log(obj);
 
-console.log(Object.(obj));
+console.log(Object.obj());
 
