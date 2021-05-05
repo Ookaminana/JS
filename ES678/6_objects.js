@@ -36,7 +36,11 @@ const second = {b: 2}
 
 const obj = Object.assign({},first,{c:2,d:3}); //Объединение в 1й массив
 
-console.log(obj);
+// console.log(obj);
 
-console.log(Object.obj());
+console.log(Object.entries(obj))
+console.log(Object.keys(obj))
+console.log(Object.values(obj))
+
+
 
